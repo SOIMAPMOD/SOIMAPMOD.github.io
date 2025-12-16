@@ -2,54 +2,70 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Link Ẩn</title>
+    <title>Index - Link Ẩn</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
+            margin: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            font-family: Arial, sans-serif;
         }
 
-        .box {
-            background: #fff;
+        .container {
+            /* 👇 MÀU XANH NƯỚC BIỂN NHẠT */
+            background: #e6f4ff;
+
             border: 3px solid #4CAF50;
-            border-radius: 12px;
-            padding: 30px;
-            width: 350px;
+            border-radius: 18px;
+            padding: 40px 25px;
+
+            width: 260px;
+            height: 420px;
+
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        h2 {
+            margin: 0;
+            color: #004a7c;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px;
             font-size: 16px;
+            border-radius: 10px;
             border: none;
-            border-radius: 8px;
-            background: #4CAF50;
-            color: white;
+            background: #2196F3;
+            color: #fff;
             cursor: pointer;
         }
 
         button:hover {
-            background: #45a049;
+            background: #1976D2;
         }
 
-        .hidden-link {
-            margin-top: 20px;
+        .link-box {
             display: none;
-            padding: 10px;
-            border: 2px dashed #4CAF50;
-            border-radius: 8px;
-            background: #f9fff9;
+            padding: 12px;
+            border: 2px dashed #2196F3;
+            border-radius: 10px;
+            background: #ffffff;
         }
 
         a {
-            color: #0066cc;
-            text-decoration: none;
+            color: #0d47a1;
             font-weight: bold;
+            text-decoration: none;
+            word-break: break-all;
         }
 
         a:hover {
@@ -59,11 +75,12 @@
 </head>
 <body>
 
-<div class="box">
-    <h2>🔒 Link Ẩn</h2>
+<div class="container">
+    <h2>🔐 Link Ẩn</h2>
+
     <button onclick="showLink()">Bấm để hiện link</button>
 
-    <div class="hidden-link" id="linkBox">
+    <div class="link-box" id="hiddenLink">
         👉 <a href="https://example.com" target="_blank">
             https://example.com
         </a>
@@ -72,7 +89,7 @@
 
 <script>
     function showLink() {
-        document.getElementById("linkBox").style.display = "block";
+        document.getElementById("hiddenLink").style.display = "block";
     }
 <script
   type="text/javascript"
@@ -81,4 +98,3 @@
 
 </body>
 </html>
- 
