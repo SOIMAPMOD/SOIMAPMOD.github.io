@@ -2,95 +2,43 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Index - Link Ẩn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nút Bấm Link Toàn Chiều Rộng</title>
     <style>
         body {
-            margin: 0;
-            height: 100vh;
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #74ebd5, #9face6);
-            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: #f0f0f0;
         }
 
-        .container {
-            /* 👇 MÀU XANH NƯỚC BIỂN NHẠT */
-            background: #e6f4ff;
-
-            border: 3px solid #4CAF50;
-            border-radius: 18px;
-            padding: 40px 25px;
-
-            width: 260px;
-            height: 420px;
-
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        h2 {
-            margin: 0;
-            color: #004a7c;
-        }
-
-        button {
-            padding: 12px;
-            font-size: 16px;
-            border-radius: 10px;
+        .button-link {
+            display: block; /* giúp width hoạt động chính xác */
+            width: 90vw; /* 90% chiều rộng màn hình */
+            max-width: 500px; /* giới hạn chiều rộng trên màn hình lớn */
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 0;
             border: none;
-            background: #2196F3;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #1976D2;
-        }
-
-        .link-box {
-            display: none;
-            padding: 12px;
-            border: 2px dashed #2196F3;
-            border-radius: 10px;
-            background: #ffffff;
-        }
-
-        a {
-            color: #0d47a1;
-            font-weight: bold;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
             text-decoration: none;
-            word-break: break-all;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .button-link:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>🔐 Link Ẩn</h2>
+    <a class="button-link" href="https://example.com" target="_blank">Nhấn vào đây</a>
 
-    <button onclick="showLink()">Bấm để hiện link</button>
-
-    <div class="link-box" id="hiddenLink">
-        👉 <a href="https://example.com" target="_blank">
-            https://adsterra.com
-        </a>
-    </div>
-</div>
-
-<script>
-    function showLink() {
-        document.getElementById("hiddenLink").style.display = "block";
-    }
 <script
   type="text/javascript"
   src="https://pl28270919.effectivegatecpm.com/ca/f4/7e/caf47edc0da59c836949d71fc13f5e4f.js"
