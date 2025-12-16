@@ -2,34 +2,83 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Nút mở link ẩn</title>
+    <title>Link Ẩn</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 100px;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+
+        .box {
+            background: #fff;
+            border: 3px solid #4CAF50;
+            border-radius: 12px;
+            padding: 30px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
         button {
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #4CAF50;
+            color: white;
             cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .hidden-link {
+            margin-top: 20px;
+            display: none;
+            padding: 10px;
+            border: 2px dashed #4CAF50;
+            border-radius: 8px;
+            background: #f9fff9;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <h2>Bấm nút để mở link ẩn</h2>
+<div class="box">
+    <h2>🔒 Link Ẩn</h2>
+    <button onclick="showLink()">Bấm để hiện link</button>
 
-    <button onclick="openHiddenLink()">Bấm vào đây</button>
+    <div class="hidden-link" id="linkBox">
+        👉 <a href="https://example.com" target="_blank">
+            https://example.com
+        </a>
+    </div>
+</div>
 
-    <script>
-        function openHiddenLink() {
-            window.open("https://example.com", "_blank");
-        }
-    <script
+<script>
+    function showLink() {
+        document.getElementById("linkBox").style.display = "block";
+    }
+<script
   type="text/javascript"
   src="https://pl28270919.effectivegatecpm.com/ca/f4/7e/caf47edc0da59c836949d71fc13f5e4f.js"
 ></script>
 
 </body>
 </html>
+ 
